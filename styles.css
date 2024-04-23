@@ -1,0 +1,131 @@
+h1 {
+    font-family: "cubano", sans-serif;
+    font-size: 100px;
+    top: -5%;
+    position: absolute;
+}
+
+h2 {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-size: 75px;
+    top: 15%;
+    position: absolute;
+}
+
+.pg_1 {
+    width: 700px;
+    border: 10px solid grey;
+    padding: 25px;
+    position: absolute;
+    top: 0;
+    left: 5%;
+    z-index: 1;
+    margin-top: 25%;
+    background-color: whitesmoke;
+}
+
+.pg_2 {
+    width: 700px;
+    border: 10px solid grey;
+    padding: 25px;
+    position: absolute;
+    top: 0;
+    left: 5%;
+    z-index: 1;
+    margin-top: 90%;
+    background-color: whitesmoke;
+}
+
+.pg_3 {
+    width: 700px;
+    border: 10px solid grey;
+    padding: 25px;
+    position: absolute;
+    top: 0;
+    left: 40%;
+    z-index: 1;
+    margin-top: 150%;
+    background-color: whitesmoke;
+}
+
+.pg_4 {
+    width: 700px;
+    border: 10px solid grey;
+    padding: 25px;
+    position: absolute;
+    top: 0;
+    left: 5%;
+    z-index: 1;
+    margin-top: 220%;
+    background-color: whitesmoke;
+}
+
+.pg_5 {
+    width: 700px;
+    border: 10px solid grey;
+    padding: 25px;
+    position: absolute;
+    top: 0;
+    left: 5%;
+    z-index: 1;
+    margin-top: 270%;
+    background-color: whitesmoke;
+}
+
+.pg_6 {
+    width: 700px;
+    border: 10px solid grey;
+    padding: 25px;
+    position: absolute;
+    top: 0;
+    left: 5%;
+    z-index: 1;
+    margin-top: 330%;
+    background-color: whitesmoke;
+}
+
+.pg_7 {
+    width: 700px;
+    border: 10px solid grey;
+    padding: 25px;
+    position: absolute;
+    top: 0;
+    left: 5%;
+    z-index: 1;
+    margin-top: 400%;
+    background-color: whitesmoke;
+}
+
+.pg_8 {
+    width: 700px;
+    border: 10px solid grey;
+    padding: 25px;
+    position: absolute;
+    top: 0;
+    left: 5%;
+    z-index: 1;
+    margin-top: 470%;
+    background-color: whitesmoke;
+}
+
+.pg_9 {
+    width: 700px;
+    border: 10px solid grey;
+    padding: 25px;
+    position: absolute;
+    top: 0;
+    left: 5%;
+    z-index: 1;
+    margin-top: 520%;
+    background-color: whitesmoke;
+}
+
+p {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-size: 30px;
+}
+
+img {
+    top: 0%;
+    position: absolute;
+}
