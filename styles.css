@@ -3,6 +3,7 @@ h1 {
     font-size: 100px;
     top: -5%;
     position: absolute;
+    color: orange;
 }
 
 h2 {
@@ -10,6 +11,7 @@ h2 {
     font-size: 75px;
     top: 15%;
     position: absolute;
+    color:black;
 }
 
 .pg_1 {
