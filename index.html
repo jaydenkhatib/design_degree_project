@@ -3,39 +3,91 @@
     <head>
       <link rel="stylesheet" href="styles.css">
       <link rel="stylesheet" href="https://use.typekit.net/mjq0mvf.css">
-      <script src='jquery-3.1.1.min.js'></script>
-      <script src='jquery.scrollstory.min.js'></script>
     </head>
     <body>
-      <div class='pg_1'>
-        <p>Welcome to New Charleston! Today, we’re going to go on an  underwater excursion to the original Charleston. Fun Fact: Before this coastline was here, this was a sleepy little suburb called Summerville.</p>
-      </div>
-      <div class='pg_2'>
-        <p>People used to come here for this city’s cultural and charm before the sea level rose so much that it got submerged.</p>
-      </div>
-      <div class='pg_3'>
-        <p>To learn more about what this place used to be like, we’ll have <br>to go underwater.</p>
-      </div>
-      <div class='pg_4'>
-        <p>People used to love visiting Rainbow Row. I promise the colors were vibrant without the water.</p>
-      </div>
-      <div class='pg_5'>
-        <p>People also used to visit the Angel Oak Trees. They’re gradually disintigrating underground, but above ground they had leaves and moss.</p>
-      </div>
-      <div class='pg_6'>
-        <p>Next we’ll go down to Old Savannah.</p>
-      </div>
-      <div class='pg_7'>
-        <p>Similar to Old Charleston, people liked the previously vibrant architecture.</p>
-      </div>
-      <div class='pg_8'>
-        <p>Some people still come to Old Savannah’s historic houses of worship for <br>raft services.</p>
-      </div>
-      <div class='pg_9'>
-        <p>Welcome back to New Charleston! Old Savannah and Old Charleston drowned because of glaciers melting due to climate change. If we don't curb our greenhouse gas emissions, one day the same thing will happen to <br>New Charleston.</p>
+      <div class='story'>
+        <h1>Disaster Tourism:</h1>
+        <h2>The Deep South in 2100</h2>
+        <div class='graphic'>
+          <div class='graphic__prose'>
+            <p class='trigger' data-step='0'>Welcome to New Charleston! Today, we’re going to go on an  underwater excursion to the original Charleston. Fun Fact: Before this coastline was here, this was a sleepy little suburb called Summerville.</p>
+            <p class='trigger' data-step='1'>People used to come here for this city’s cultural and charm before the sea level rose so much that it got submerged.</p>
+            <p class='trigger' data-step='2'>To learn more about what this place used to be like, we’ll have <br>to go underwater.</p>
+            <p class='trigger' data-step='3'>People used to love visiting Rainbow Row. I promise the colors were vibrant without the water.</p>
+            <p class='trigger' data-step='4'>People also used to visit the Angel Oak Trees. They’re gradually disintigrating underground, but above ground they had leaves and moss.</p>
+            <p class='trigger' data-step='5'>Next we’ll go down to Old Savannah.</p>
+            <p class='trigger' data-step='6'>Similar to Old Charleston, people liked the previously vibrant architecture.</p>
+            <p class='trigger' data-step='7'>Some people still come to Old Savannah’s historic houses of worship for <br>raft services.</p>
+            <p class='trigger' data-step='8'>Welcome back to New Charleston! Old Savannah and Old Charleston drowned because of glaciers melting due to climate change. If we don't curb our greenhouse gas emissions, one day the same thing will happen to <br>New Charleston.</p>
+          </div>
+          <div class='graphic__vis'></div>
+        </div>
       </div>
       <img src="spec_fic.png" alt="background" width="1440px" height="8101.8974px">
-      <h1>Disaster Tourism:</h1>
-      <h2>The Deep South in 2100</h2>
+      <script src='jquery-3.1.1.min.js'></script>
+      <script src='jquery.scrollstory.min.js'></script>
+      <script>
+        (function() {
+    
+          function scrollstory() {
+            // select elements using jQuery since it is a dependency
+            var $graphicEl = $('.graphic')
+            var $graphicVisEl = $graphicEl.find('.graphic__vis')
+    
+            // viewport height
+            var viewportHeight = window.innerHeight
+            var halfViewportHeight = Math.floor(viewportHeight / 2)
+    
+            // a global function creates and handles all the vis + updates
+            var graphic = createGraphic('.graphic')
+    
+            // handle the fixed/static position of grahpic
+            var toggle = function(fixed, bottom) {
+              if (fixed) $graphicVisEl.addClass('is-fixed')
+              else $graphicVisEl.removeClass('is-fixed')
+    
+              if (bottom) $graphicVisEl.addClass('is-bottom')
+              else $graphicVisEl.removeClass('is-bottom')
+            }
+    
+            // callback function when scrollStory detects item to trigger
+            var handleItemFocus = function(event, item) {
+              var step = item.data.step
+              graphic.update(step)
+            }	
+    
+            // callback on scrollStory scroll event
+            // toggle fixed position
+            var handleContainerScroll = function(event) {
+              var bottom = false
+              var fixed = false
+    
+              var bb = $graphicEl[0].getBoundingClientRect()
+              var bottomFromTop = bb.bottom - viewportHeight
+    
+              if (bb.top < 0 && bottomFromTop > 0) {
+                bottom = false
+                fixed = true
+              } else if (bb.top < 0 && bottomFromTop < 0) {
+                bottom = true
+                fixed = false
+              }
+    
+              toggle(fixed, bottom)
+            }
+    
+            // instantiate scrollStory
+            $graphicEl.scrollStory({
+              contentSelector: '.trigger',
+              triggerOffset: halfViewportHeight,
+              itemfocus: handleItemFocus,
+              containerscroll: handleContainerScroll,
+            })
+          }
+    
+          scrollstory()
+    
+        })()
+      </script>
     </body>
   </html>
