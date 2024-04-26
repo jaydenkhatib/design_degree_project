@@ -121,6 +121,18 @@ window.createGraphic = function(graphicSelector) {
             img.height = "auto";
             dv.appendChild(img);
 		},
+
+        function step9() {
+            // remove all child nodes
+            while (dv.hasChildNodes()) { 
+                dv.removeChild(dv.lastChild); 
+            } 
+
+            img.src = "./img/spec_fic_pg_1.png";
+            img.width = "100%";
+            img.height = "auto";
+            dv.appendChild(img);
+		},
 	]
 
 	// update our img

@@ -54,3 +54,15 @@ img {
     left: 0;
     z-index: 0;
 }
+
+ul {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-size: 20px;
+    color: black;
+}
+
+li span {
+    background-color: whitesmoke;
+    width: auto;
+    height:fit-content;
+}
