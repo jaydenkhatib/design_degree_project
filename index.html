@@ -10,17 +10,18 @@
         <h2>The Deep South in 2100</h2>
         <div class='graphic'>
           <div class='graphic__prose'>
-            <p class='trigger' data-step='0'>Welcome to New Charleston! Today, we’re going to go on an  underwater excursion to the original Charleston. Fun Fact: Before this coastline was here, this was a sleepy little suburb called Summerville.</p>
-            <p class='trigger' data-step='1'>People used to come here for this city’s cultural and charm before the sea level rose so much that it got submerged.</p>
-            <p class='trigger' data-step='2'>To learn more about what this place used to be like, we’ll have <br>to go underwater.</p>
-            <p class='trigger' data-step='3'>People used to love visiting Rainbow Row. I promise the colors were vibrant without the water.</p>
-            <p class='trigger' data-step='4'>People also used to visit the Angel Oak Trees. They’re gradually disintigrating underground, but above ground they had leaves and moss.</p>
-            <p class='trigger' data-step='5'>Next we’ll go down to Old Savannah.</p>
-            <p class='trigger' data-step='6'>Similar to Old Charleston, people liked the previously vibrant architecture.</p>
-            <p class='trigger' data-step='7'>Some people still come to Old Savannah’s historic houses of worship for <br>raft services.</p>
-            <p class='trigger' data-step='8'>Welcome back to New Charleston! Old Savannah and Old Charleston drowned because of glaciers melting due to climate change. If we don't curb our greenhouse gas emissions, one day the same thing will happen to <br>New Charleston.</p>
+            <p class='trigger' data-step='0'><span>Welcome to New Charleston! Today, we’re going to go on an  underwater excursion to the original Charleston. Fun Fact: Before this coastline was here, this was a sleepy little suburb called Summerville.</span></p>
+            <p class='trigger' data-step='1'><span>People used to come here for this city’s cultural and charm before the sea level rose so much that it got submerged.</span></p>
+            <p class='trigger' data-step='2'><span>To learn more about what this place used to be like, we’ll have <br>to go underwater.</span></p>
+            <p class='trigger' data-step='3'><span>People used to love visiting Rainbow Row. I promise the colors were vibrant without the water.</span></p>
+            <p class='trigger' data-step='4'><span>People also used to visit the Angel Oak Trees. They’re gradually disintigrating underground, but above ground they had leaves and moss.</span></p>
+            <p class='trigger' data-step='5'><span>Next we’ll go down to Old Savannah.</span></p>
+            <p class='trigger' data-step='6'><span>Similar to Old Charleston, people liked the previously vibrant architecture.</span></p>
+            <p class='trigger' data-step='7'><span>Some people still come to Old Savannah’s historic houses of worship for <br>raft services.</span></p>
+            <p class='trigger' data-step='8'><span>Welcome back to New Charleston! Old Savannah and Old Charleston drowned because of glaciers melting due to climate change. If we don't curb our greenhouse gas emissions, one day the same thing will happen to <br>New Charleston.</span></p>
           </div>
-          <div class='graphic__vis'></div>
+          <div class='graphic__vis' id='image'></div>
+          <div id='inset'></div>
         </div>
       </div>
       <script src='d3.v4.min.js'></script>
@@ -80,7 +81,7 @@
             // instantiate scrollStory
             $graphicEl.scrollStory({
               contentSelector: '.trigger',
-              triggerOffset: halfViewportHeight,
+              triggerOffset: halfViewportHeight * 1.5,
               itemfocus: handleItemFocus,
               containerscroll: handleContainerScroll,
             })

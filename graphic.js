@@ -9,36 +9,124 @@ window.createGraphic = function(graphicSelector) {
 	var graphicEl = d3.select('.graphic')
 	var graphicVisEl = graphicEl.select('.graphic__vis')
 	var graphicProseEl = graphicEl.select('.graphic__prose')
+    var dv = document.getElementById('image')
+    var img = document.createElement("IMG")
 	
 	// actions to take on each step of our scroll-driven story
 	var steps = [
 		function step0() {
-			var img = document.createElement("IMG");
-            img.src = "/img/spec_fic_pg_1.png";
+            // remove all child nodes
+            while (dv.hasChildNodes()) { 
+                dv.removeChild(dv.lastChild); 
+            } 
+
+            img.src = "./img/spec_fic_pg_1.png";
             img.width = "100%";
             img.height = "auto";
-            var oldImg = document.getElementById('oldImg');
-            document.getElementsByClassName('graphic__vis').replaceChild(img, oldImg);
+            dv.appendChild(img);
 		},
 
 		function step1() {
-			var img = document.createElement("IMG");
-            img.src = "/img/spec_fic-02.png";
+            // remove all child nodes
+            while (dv.hasChildNodes()) { 
+                dv.removeChild(dv.lastChild); 
+            } 
+
+            img.src = "./img/spec_fic-02.png";
             img.width = "100%";
             img.height = "auto";
-            var oldImg = document.getElementById('oldImg');
-            document.getElementsByClassName('graphic__vis').replaceChild(img, oldImg);
+            dv.appendChild(img);
+		},
+
+        function step2() {
+            // remove all child nodes
+            while (dv.hasChildNodes()) { 
+                dv.removeChild(dv.lastChild); 
+            } 
+
+            img.src = "./img/spec_fic-03.png";
+            img.width = "100%";
+            img.height = "auto";
+            dv.appendChild(img);
+		},
+
+        function step3() {
+            // remove all child nodes
+            while (dv.hasChildNodes()) { 
+                dv.removeChild(dv.lastChild); 
+            } 
+
+            img.src = "./img/spec_fic-04.png";
+            img.width = "100%";
+            img.height = "auto";
+            dv.appendChild(img);
+		},
+
+        function step4() {
+            // remove all child nodes
+            while (dv.hasChildNodes()) { 
+                dv.removeChild(dv.lastChild); 
+            } 
+
+            img.src = "./img/spec_fic-05.png";
+            img.width = "100%";
+            img.height = "auto";
+            dv.appendChild(img);
+		},
+
+        function step5() {
+            // remove all child nodes
+            while (dv.hasChildNodes()) { 
+                dv.removeChild(dv.lastChild); 
+            } 
+
+            img.src = "./img/spec_fic-06.png";
+            img.width = "100%";
+            img.height = "auto";
+            dv.appendChild(img);
+		},
+
+        function step6() {
+            // remove all child nodes
+            while (dv.hasChildNodes()) { 
+                dv.removeChild(dv.lastChild); 
+            } 
+
+            img.src = "./img/spec_fic-07.png";
+            img.width = "100%";
+            img.height = "auto";
+            dv.appendChild(img);
+		},
+
+        function step7() {
+            // remove all child nodes
+            while (dv.hasChildNodes()) { 
+                dv.removeChild(dv.lastChild); 
+            } 
+
+            img.src = "./img/spec_fic-08.png";
+            img.width = "100%";
+            img.height = "auto";
+            dv.appendChild(img);
+		},
+
+        function step8() {
+            // remove all child nodes
+            while (dv.hasChildNodes()) { 
+                dv.removeChild(dv.lastChild); 
+            } 
+
+            img.src = "./img/spec_fic_pg_1.png";
+            img.width = "100%";
+            img.height = "auto";
+            dv.appendChild(img);
 		},
 	]
 
-	// update our chart
+	// update our img
 	function update(step) {
-		steps[step].call()
-	}
-	
-	// little helper for string concat if using es5
-	function translate(x, y) {
-		return 'translate(' + x + ',' + y + ')'
+        console.log(steps[step]);
+		steps[step]();
 	}
 
 	function setupProse() {
