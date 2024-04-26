@@ -81,8 +81,8 @@ li span {
     border-radius: 8px;
 }
 
-a {
+a:active, a:focus {
+    outline: 0;
     border: none;
-    outline:none;
-    opacity:0;
+    -moz-outline-style: none;
 }
