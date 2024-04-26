@@ -3,7 +3,7 @@ h1 {
     font-size: 100px;
     top: -5%;
     position: absolute;
-    color: orange;
+    color: purple;
     z-index: 1;
 }
 
@@ -65,4 +65,18 @@ li span {
     background-color: whitesmoke;
     width: auto;
     height:fit-content;
+}
+
+.button {
+    z-index: 3;
+    position: relative;
+    background-color: blueviolet;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
 }
