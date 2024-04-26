@@ -18,7 +18,7 @@ window.createGraphic = function(graphicSelector) {
             // remove all child nodes
             while (dv.hasChildNodes()) { 
                 dv.removeChild(dv.lastChild); 
-            } 
+            }
 
             img.src = "./img/spec_fic_pg_1.png";
             img.width = "100%";
